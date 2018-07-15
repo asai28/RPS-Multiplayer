@@ -1,21 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
 .box{
-    margin: 10px 10px;
+    margin: 15px 15px;
     padding: 10px 10px;
     border: solid black 2px;
+    height: 200px;
 }
 
 #gameContainer{
-    margin: 10px 10px;
+    margin: 15px 15px;
     padding: 5px 5px;
     border: solid black 2px;
+    position: relative;
 }
 
 body{
     text-align: left;
     background-image: url("../images/wallpaper.jpg");
     background-size: cover;
+    font-family: 'Markazi Text', serif;
 }
 
 #greeting, #showPlayer, .row{
     text-align: center;
+}
+
+body h1{
+    text-align: center;
+}
+
+#greeting, #showPlayer{
+    text-align: center;
+}
+
+#choice:hover{
+    background-color: green;
+    color: white; 
 }

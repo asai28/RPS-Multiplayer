@@ -5,22 +5,29 @@
     <meta charset="UTF-8">
     <title>Rock Paper Scissors Part 2
     </title>
+    <!-- Reset link-->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- jQuery Link-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <!-- BootStrap link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
+    <!-- Style sheet link -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text" rel="stylesheet">
 </head>
 
 <body>
     <div class="jumbotron container">
         <h1>ROCK, PAPER, SCISSORS!</h1>
+        <div class="form-group center">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="John Doe" style="width: 75%">
+            <button class="btn" id="start">Start</button>
+        </div>
         <div id="displayElements">
-            <div class="row" id="greeting">Hi
-                <span id="name"></span>! You are player
-                <span id="playerNum"></span>
+            <div class="row" id="greeting">
             </div>
             <div class="row" id="showPlayer">
                 It's your turn!
@@ -28,15 +35,9 @@
         </div>
         <div id="gameContainer">
             <div class="row">
-                <div id="playerA" class="box">
-
-                </div>
-                <div id="display" class="box">
-
-                </div>
-                <div id="playerB" class="box">
-
-                </div>
+                <div id="playerA" class="box col-lg-3"></div>
+                <div id="display" class="box col-lg-3"></div>
+                <div id="playerB" class="box col-lg-3"></div>
             </div>
         </div>
 
@@ -53,6 +54,23 @@
         </form>
     </div>
 
+    <!-- Link to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCiX0qghWdDY_gssGVgxe5XMgsleyRFyRw",
+            authDomain: "rock-paper-scissors-26e47.firebaseapp.com",
+            databaseURL: "https://rock-paper-scissors-26e47.firebaseio.com",
+            projectId: "rock-paper-scissors-26e47",
+            storageBucket: "rock-paper-scissors-26e47.appspot.com",
+            messagingSenderId: "421040765250"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <!-- Link to app.js -->
     <script src="assets/javascript/app.js" type="text/javascript"></script>
 
 </body>
